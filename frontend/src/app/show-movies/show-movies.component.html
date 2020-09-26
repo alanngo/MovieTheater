@@ -1,0 +1,20 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Rated</th>
+            <th>Viewer Rating</th>
+            <th>Delete</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let m of movies">
+                <td>{{m._id}}</td>
+                <td>{{m.title}}</td>
+                <td>{{m.rated}}</td>
+                <td>{{m.rating}}</td>
+                <td><button class="btn-danger btn" (click)="deleteMovie(m._id)">X</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
