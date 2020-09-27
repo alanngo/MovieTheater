@@ -40,7 +40,7 @@ class Collection:
     @return the entries with the associated criteria
     '''
     def find_by(self, key, value: any):
-        return self.find_by_criteria({key: value})[0]
+        return self.find_by_criteria({key: value})
 
     '''
     find an entry based on the id
@@ -48,7 +48,7 @@ class Collection:
     @return the entry w/ associated id
     '''
     def find_by_id(self, id):
-        return self.find_by("_id", int(id))
+        return self.find_by("_id", int(id))[0]
 
     # insertion functions
 
