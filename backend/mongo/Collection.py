@@ -24,8 +24,6 @@ class Collection:
         coll = self.__collection.find(criteria)
         for e in coll:
             ret.append(e)
-        if len(ret) == 1:
-            return ret[0]
         return ret
 
     """
@@ -42,7 +40,7 @@ class Collection:
     @return the entries with the associated criteria
     '''
     def find_by(self, key, value: any):
-        return self.find_by_criteria({key: value})
+        return self.find_by_criteria({key: value})[0]
 
     '''
     find an entry based on the id
