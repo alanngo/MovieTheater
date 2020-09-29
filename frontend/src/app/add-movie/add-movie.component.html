@@ -1,1 +1,24 @@
-<p>add-movie works!</p>
+<div class="card">
+    <div class="card-header bg-dark text-light text">
+        <h1>Movie Repo</h1>
+    </div>
+    <div class="card-body border-dark">
+        <form action="" [formGroup]="movieForm" (ngOnSubmit)="addMovie()">
+            <div class="form-group">
+                <label for="">Title</label>
+                <input type="text" class="form-control" formControlName="title" >
+            </div>
+            <div class="form-group">
+                <label for="">Rating</label>
+                <input type="text" class="form-control" formControlName="rating" >
+            </div>
+            <div class="form-group">
+                <label for="">Rated</label>
+                <input type="text" class="form-control" formControlName="rated" >
+            </div>
+            <button [disabled]="false" class="btn-success btn" (click)="addMovie()">Add Movie</button>
+            &nbsp;
+            <button class="btn-primary btn" (click)="showMovies()">Show Movies</button>
+        </form>
+    </div>
+</div>

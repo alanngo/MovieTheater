@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { RootComponent } from './root/root.component';
 import { ShowMoviesComponent } from './show-movies/show-movies.component';
 import { AddMovieComponent } from './add-movie/add-movie.component';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,11 @@ import { AddMovieComponent } from './add-movie/add-movie.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -24,6 +24,11 @@ export class MovieService {
     .pipe(catchError(this.handleError))
   }
 
+  adMovie(movie: Movie): Observable<Movie>
+  {
+    return this.http.post<Movie>(url, movie)
+    .pipe(catchError(this.handleError))
+  }
 
   private handleError(err: HttpErrorResponse)
   {
